@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Keyword Filter",
+    "version": "1.0",
+    "description": "Remove tweets containing specific keywords.",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Twitter Filter"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.twitter.com/*",
+          "*://*.x.com/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "host_permissions": [
+      "*://*.twitter.com/*",
+      "*://*.x.com/*"
+    ]
+  }
+  
+
+
