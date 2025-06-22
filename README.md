@@ -51,3 +51,7 @@ Feel free to contribute or fork it to fit your needs!
 
 Enjoy a cleaner timeline! 🙌
 
+###ChangeLog 
+
+0.4.14 - First Release
+

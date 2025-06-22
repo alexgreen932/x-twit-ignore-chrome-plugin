@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "X (Twitter) Keyword Filter and Highlighter",
+  "version": "1.1",
+  "description": "Ignore or highlight tweets containing specific keywords on X.com (Twitter).",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tweet Filter"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.x.com/*", "*://*.twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "*://*.x.com/*",
+    "*://*.twitter.com/*"
+  ]
+}

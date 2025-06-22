@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tweet Filter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="tabs">
+    <button data-tab="ignore" class="active">Ignore Tweets</button>
+    <button data-tab="highlight">Highlight Tweets</button>
+    <button data-tab="settings">Settings</button>
+  </div>
+
+  <div id="ignore" class="tab-content active">
+    <h2>Ignore Keywords</h2>
+    <input type="text" id="ignore-input" placeholder="Add keyword" />
+    <button id="add-ignore">Add</button>
+    <ul id="ignore-list"></ul>
+  </div>
+
+  <div id="highlight" class="tab-content">
+    <h2>Highlight Keywords</h2>
+    <input type="text" id="highlight-input" placeholder="Add keyword" />
+    <button id="add-highlight">Add</button>
+    <ul id="highlight-list"></ul>
+  </div>
+
+  <div id="settings" class="tab-content">
+    <h2>Settings</h2>
+    <label>
+      <input type="checkbox" id="remove-sidebar" />
+      Remove Right Sidebar
+    </label>
+
+    <div class="control-field">
+      <label>Highlighted Background</label>
+      <input type="color" id="bg-color" />
+    </div>
+
+    <div class="control-field">
+      <label>Font Color</label>
+      <input type="color" id="font-color" />
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
